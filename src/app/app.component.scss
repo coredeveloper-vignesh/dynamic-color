@@ -1,0 +1,11 @@
+@import 'variable';
+h1 {
+  background: $primary;
+  color: $secondary;
+  padding: 10px;
+}
+h2 {
+  background: $secondary;
+  color: $primary;
+  padding: 10px;
+}
