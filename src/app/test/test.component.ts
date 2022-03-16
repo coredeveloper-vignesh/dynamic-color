@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChangeTitleNameService } from '../change-title-name.service';
 
 @Component({
   selector: 'app-test',
@@ -6,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.scss'],
 })
 export class TestComponent implements OnInit {
-  constructor() {}
+  constructor(private _changeTitleNameService: ChangeTitleNameService) {}
   val: any;
 
   ChangeColor(e) {
     document.documentElement.style.setProperty('--secondary-color', e);
-    console.log(e);
+    this._changeTitleNameService.sendData(e);
   }
-  ngOnInit() {}
+
+  value:any
+  ngOnInit() {
+    this._changeTitleNameService.title.subscribe((res) => this.value=res);
+  }
 }
