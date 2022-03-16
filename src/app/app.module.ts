@@ -11,6 +11,5 @@ import { ChangeTitleNameService } from './change-title-name.service';
   imports: [BrowserModule, FormsModule],
   declarations: [AppComponent, HelloComponent, TestComponent],
   bootstrap: [AppComponent],
-  providers: [ChangeTitleNameService],
 })
 export class AppModule {}
